@@ -30,6 +30,8 @@ async function run() {
     await client.connect();
     const usersCollection = client.db("My_users").collection("shipon");
 
+
+    // users get data client site
   app.get('/users', async(req, res)=>{
     const query = usersCollection.find()
     const result = await query.toArray()
